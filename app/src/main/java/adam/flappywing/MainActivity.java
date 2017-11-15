@@ -3,6 +3,8 @@ package adam.flappywing;
 import android.app.Activity;
 import android.os.Bundle;
 
+
+// AHoooooj
 public class MainActivity extends Activity {
 
     @Override
