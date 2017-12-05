@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context="adam.flappywing.AboutActivity">
+
+
+
+    <TextView
+        android:id="@+id/aboutTextViewAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/aboutText"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textColor="@color/aboutTextColor"
+        android:textColor="@color/aboutTextColor"
+        tools:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.496" />
+
+
+    <Button
+        android:id="@+id/aboutButtonBack"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="290dp"
+        android:text="@string/aboutButtonBack"
+        android:background="@color/buttonBackground"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutTextViewAbout" />
+
+
+
+</android.support.constraint.ConstraintLayout>

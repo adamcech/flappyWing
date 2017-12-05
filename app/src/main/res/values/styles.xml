@@ -1,7 +1,18 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+    <style name="AppTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen">
+    </style>
+
+
+    <!--
+        <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+
+        </style>
+    -->
+
+
+
+    <style name="MyButton" parent="android:ButtonBar">
         <!-- Customize your theme here. -->
     </style>
 

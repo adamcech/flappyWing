@@ -2,20 +2,41 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="adam.flappywing">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:launchMode="singleInstance"
+            android:name=".MainActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:launchMode="singleInstance"
+            android:name=".GameActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:launchMode="singleInstance"
+            android:name=".HighscoreActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:launchMode="singleInstance"
+            android:name=".SettingsActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:launchMode="singleInstance"
+            android:name=".AboutActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
     </application>
 
 </manifest>
