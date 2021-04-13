@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_background"
-    tools:context="adam.flappywing.HighscoreActivity">
+    tools:context="adam.flappywing.activities.HighscoreActivity">
 
 
     <TextView

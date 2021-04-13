@@ -7,7 +7,7 @@
     <string name="mainButtonAbout">About</string>
     <string name="mainButtonExit">Exit</string>
 
-    <string name="aboutText">Adam Čech\nTAMZ 2 - Project\nVŠB, CEC0113</string>
+    <string name="aboutText">Adam Čech</string>
     <string name="aboutButtonBack">Back</string>
 
     <string name="settingsText">Settings</string>

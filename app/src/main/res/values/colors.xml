@@ -6,10 +6,10 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="logoColor">#ff4040</color>
-    <color name="aboutTextColor">#00FF00</color>
+    <color name="aboutTextColor">#ff4040</color>
     <color name="buttonBackground">#DFDFDF</color>
 
-    <color name="settingsHeaderColor">#9f9fff</color>
+    <color name="settingsHeaderColor">#ff4040</color>
 
 
     <color name="listViewBackground">#EFEFEF</color>
