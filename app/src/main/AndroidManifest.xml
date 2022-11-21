@@ -14,29 +14,14 @@
         android:theme="@style/AppTheme">
         <activity
             android:launchMode="singleInstance"
-            android:name=".activities.MainActivity"
+            android:exported="true"
+            android:name=".activities.GameActivity"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:launchMode="singleInstance"
-            android:name=".activities.GameActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
-        <activity
-            android:launchMode="singleInstance"
-            android:name=".activities.HighscoreActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
-        <activity
-            android:launchMode="singleInstance"
-            android:name=".activities.SettingsActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
-        <activity
-            android:launchMode="singleInstance"
-            android:name=".activities.AboutActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
     </application>
 
 </manifest>

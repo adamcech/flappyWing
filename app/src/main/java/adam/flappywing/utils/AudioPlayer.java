@@ -5,9 +5,7 @@ import android.media.MediaPlayer;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
-import adam.flappywing.Config;
 import adam.flappywing.R;
 
 public class AudioPlayer  {
@@ -38,9 +36,6 @@ public class AudioPlayer  {
     }
 
     public void play(Context context, int rSoundId, boolean looping, int pause, boolean isSettings){
-        float soundLevel = Config.getSoundLevel();
-        if (soundLevel <= 0 && !isSettings) { return; }
-
         final MyMediaPlayer myMediaPlayer = new MyMediaPlayer();
         myMediaPlayer.resourceId = rSoundId;
         myMediaPlayer.looping = looping;
@@ -58,7 +53,7 @@ public class AudioPlayer  {
             }
         });
 
-        myMediaPlayer.mediaPlayer.setVolume(soundLevel, soundLevel);
+        myMediaPlayer.mediaPlayer.setVolume(1.0f, 1.0f);
 
         myMediaPlayer.mediaPlayer.start();
 

@@ -1,18 +1,11 @@
 package adam.flappywing.activities;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.media.AudioManager;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
-
 import adam.flappywing.utils.AudioPlayer;
-import adam.flappywing.Config;
 import adam.flappywing.game.GameSurface;
-import adam.flappywing.rest.RestScoreClient;
 
 
 public class GameActivity extends Activity {
@@ -23,6 +16,7 @@ public class GameActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // TODO poresit audioPlayer at meni sound/song pripadne jinak apod..
         audioPlayer = AudioPlayer.getInstance(true);
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
         audioPlayer.playRandomStartSound(getBaseContext());
@@ -69,7 +63,7 @@ public class GameActivity extends Activity {
     }
 
     public void end() {
-        Intent intent = new Intent(GameActivity.this, MainActivity.class);
+        Intent intent = new Intent(GameActivity.this, GameActivity.class);
         startActivity(intent);
 
         finish();
@@ -81,30 +75,7 @@ public class GameActivity extends Activity {
         end();
     }
 
-    public void signalEnd(int score) {
+    public void signalEnd() {
         audioPlayer.playRandomEndSound(getBaseContext());
-
-        if (score > Config.PLAYER_HIGHSCORE){
-            Config.PLAYER_HIGHSCORE = score;
-            SharedPreferences mySharedPref;
-            SharedPreferences.Editor mySharedEditor;
-
-            mySharedPref = getSharedPreferences("config", Context.MODE_PRIVATE);
-            mySharedEditor = mySharedPref.edit();
-            mySharedEditor.putInt("PLAYER_HIGHSCORE", Config.PLAYER_HIGHSCORE);
-            mySharedEditor.apply();
-        }
-
-        new InsertScore().execute(new HighscoreEntry(Config.PLAYER_NAME, score));
-    }
-
-
-    private class InsertScore extends AsyncTask<HighscoreEntry, Void, Void> {
-
-        @Override
-        protected Void doInBackground(HighscoreEntry... params) {
-            RestScoreClient.insert(params[0]);
-            return null;
-        }
     }
 }

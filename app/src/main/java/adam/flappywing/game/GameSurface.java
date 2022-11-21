@@ -18,6 +18,7 @@ import adam.flappywing.game.objects.ship.Ship;
 import adam.flappywing.game.objects.pipes.PipesManager;
 import adam.flappywing.utils.AudioPlayer;
 
+// TODO nejak napojit ovladani pres gyroskop
 public class GameSurface extends SurfaceView implements SurfaceHolder.Callback {
 
     private GameThread gameThread;
@@ -62,6 +63,7 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback {
         }
     }
 
+    // TODO smazat pokud se pouzije senzor
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         for (GameObject o : getTouchEventObservers()){
@@ -120,7 +122,7 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback {
             addGameObject(endScreen);
             addTouchObserver(endScreen);
 
-            ((GameActivity)getContext()).signalEnd(score.toInt());
+            ((GameActivity)getContext()).signalEnd();
         }
     }
 

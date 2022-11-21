@@ -22,6 +22,12 @@ public class GameThread extends Thread {
             try {
                 this.gameSurface.update();
 
+                // TODO mi to ted po peti letech na soucasnem mobilu jelo extremne rychle, takze
+                // jsem to takhle prasacky omezil, ale chtelo byt o lepsi reseni, ktere zajisti
+                // stabilni plynule FPS
+                // Pripadne smazat tohle a zmensit rychlost lode a ostatnich veci asi bude taky fungovat
+                Thread.sleep(1);
+
                 canvas = this.surfaceHolder.lockCanvas();
                 synchronized (canvas)  {
                     this.gameSurface.draw(canvas);
