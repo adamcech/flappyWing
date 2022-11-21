@@ -1,17 +1,3 @@
 <resources>
     <string name="app_name">F-Wing</string>
-    <string name="mainHeader">Flappy Wing</string>
-    <string name="mainButtonPlay">Play</string>
-    <string name="mainButtonHighscore">Highscore</string>
-    <string name="mainButtonSettings">Settings</string>
-    <string name="mainButtonAbout">About</string>
-    <string name="mainButtonExit">Exit</string>
-
-    <string name="aboutText">Adam Čech</string>
-    <string name="aboutButtonBack">Back</string>
-
-    <string name="settingsText">Settings</string>
-
-    <string name="highscoreHeader">Highscore</string>
-    <string name="highscoreOnline">Online score:</string>
 </resources>
